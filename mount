@@ -8,8 +8,8 @@ fi
 mkdir /mnt/ramdisk
 mkdir /mnt/ftp
 if [[ $# -eq 0 ]] ; then
-#    mount -t tmpfs -o size=0g tmpfs /mnt/ramdisk
-#    curlftpfs ftpuser:ftppass@ftphostname /mnt/ftp/
+    mount -t tmpfs -o size=0g tmpfs /mnt/ramdisk
+    curlftpfs ftpuser:ftppass@ftphostname /mnt/ftp/
     exit 1
 fi
 mount -t tmpfs -o size="$1"g"" tmpfs /mnt/ramdisk
