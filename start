@@ -1,8 +1,11 @@
 tar -zxvf ram.tar.gz
 
+contract=xch13gg09wcutdjqlzch0dnh8tedpnm7dgu7vzslc2wm9h2mvnjp5paqjq59w9
+farmerkey=ad1401dc1b5dd9092e0d126dc1a29a5e861e29824c7195bfa0667e2a919b3746d6724d747ac7c9577a9b7835174ec2b7
+
 if [[ $# -eq 1 ]] ; then
-    ./ram -k 32 -n "$1" -w -t /mnt/ramdisk/ -d /mnt/ftp/ -c xch13gg09wcutdjqlzch0dnh8tedpnm7dgu7vzslc2wm9h2mvnjp5paqjq59w9 -f ad1401dc1b5dd9092e0d126dc1a29a5e861e29824c7195bfa0667e2a919b3746d6724d747ac7c9577a9b7835174ec2b7
+    ./ram -k 32 -n "$1" -w -t /mnt/ramdisk/ -d /mnt/ftp/ -c ${contract} -f ${farmerkey}
     exit 1
 fi
 
-./ram -k 32 -n 1 -w -t /mnt/ramdisk/ -d /mnt/ramdisk/ -c xch13gg09wcutdjqlzch0dnh8tedpnm7dgu7vzslc2wm9h2mvnjp5paqjq59w9 -f ad1401dc1b5dd9092e0d126dc1a29a5e861e29824c7195bfa0667e2a919b3746d6724d747ac7c9577a9b7835174ec2b7
+./ram -k 32 -n 1 -w -t /mnt/ramdisk/ -d /mnt/ramdisk/ -c ${contract} -f ${farmerkey}
